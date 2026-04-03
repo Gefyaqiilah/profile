@@ -1,0 +1,59 @@
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h2>Let's work together.</h2>
+        <p>
+          Have a project in mind? Want to collaborate? Or just want to say hello?
+          Feel free to reach out — I usually respond within a day.
+        </p>
+        <div class="contact-links mono">
+          <a href="mailto:gefyaqiilah26&#64;gmail.com">gefyaqiilah26&#64;gmail.com</a>
+          <a href="https://github.com/Gefyaqiilah" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div *ngIf="!submitted">
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="form-group">
+              <label class="mono" for="name">Name</label>
+              <input id="name" type="text" [(ngModel)]="form.name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label class="mono" for="email">Email</label>
+              <input id="email" type="email" [(ngModel)]="form.email" name="email" required placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="mono">Type</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" [(ngModel)]="form.type" name="type" value="message" />
+                  <span>Message</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" [(ngModel)]="form.type" name="type" value="cv" />
+                  <span>Request CV</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group" *ngIf="!isCV">
+              <label class="mono" for="message">Message</label>
+              <textarea id="message" [(ngModel)]="form.message" name="message" rows="4" [required]="!isCV" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid || sending">
+              {{ sending ? 'Sending...' : (isCV ? 'Request CV' : 'Send Message') }}
+            </button>
+          </form>
+        </div>
+
+        <div class="success" *ngIf="submitted">
+          <p>{{ isCV ? 'CV request received — I\'ll send it to you shortly.' : 'Message sent — I\'ll get back to you soon.' }}</p>
+          <button class="btn" (click)="reset()">Send another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

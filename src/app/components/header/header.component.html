@@ -1,0 +1,23 @@
+<header [class.scrolled]="scrolled">
+  <div class="container header-inner">
+    <nav class="nav-desktop">
+      HALOOOO
+      <a *ngFor="let link of navLinks" [href]="link.href">{{ link.label }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" (click)="toggleTheme()"
+        [attr.aria-label]="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
+        <span *ngIf="!isDark">&#9788;</span>
+        <span *ngIf="isDark">&#9790;</span>
+      </button>
+      <button class="menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" *ngIf="menuOpen">
+    <a *ngFor="let link of navLinks" [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+  </div>
+</header>

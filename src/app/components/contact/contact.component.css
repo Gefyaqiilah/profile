@@ -1,0 +1,118 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.contact-info p {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.contact-links a {
+  color: var(--fg-muted);
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--fg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  outline: none;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--fg);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--fg-muted);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--fg);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+input[type="radio"] {
+  width: auto;
+  accent-color: var(--fg);
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.success p {
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

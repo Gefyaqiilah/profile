@@ -1,0 +1,26 @@
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Building things that matter.</h2>
+        <p>
+          I'm Gefy, a fullstack developer based in Bandung, West Java with 4+ years
+          of experience delivering end-to-end solutions — from backend services
+          to frontend interfaces and cross-platform mobile apps.
+        </p>
+        <p>
+          I enjoy tackling complex technical problems and working closely with teams
+          to find the best approach. Communication has always been one of my strongest
+          points, helping keep everyone aligned and projects moving smoothly.
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat" *ngFor="let s of stats">
+          <span class="stat-value">{{ s.value }}</span>
+          <span class="stat-label mono">{{ s.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

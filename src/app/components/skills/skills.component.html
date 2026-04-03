@@ -1,0 +1,13 @@
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills</p>
+    <div class="categories">
+      <div class="category" *ngFor="let cat of categories">
+        <p class="cat-name mono">{{ cat.name }}</p>
+        <div class="tag-list">
+          <span class="tag" *ngFor="let item of cat.items">{{ item }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
