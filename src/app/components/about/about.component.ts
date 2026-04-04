@@ -10,7 +10,7 @@ import { NgFor } from '@angular/common';
 })
 export class AboutComponent {
   stats = [
-    { value: '4+', label: 'Years Experience' },
+    { value: '5+', label: 'Years Experience' },
     { value: '2021', label: 'Started Professionally' },
     { value: '🏆', label: 'Best Employee in Tech (2023)' },
   ];
