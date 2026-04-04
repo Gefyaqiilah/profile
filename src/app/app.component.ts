@@ -7,6 +7,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ClickEffectComponent } from './components/click-effect/click-effect.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienceComponent,
     ContactComponent,
     FooterComponent,
+    ClickEffectComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
