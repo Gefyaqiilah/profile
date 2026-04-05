@@ -92,8 +92,8 @@ export class ClickEffectComponent implements OnInit, OnDestroy {
     this.animations.push(entry);
 
     const animPath = this.isDark
-      ? 'assets/mouse-hits-white.json'
-      : 'assets/mouse-hits.json';
+      ? 'assets/animations/mouse-hits-white.json'
+      : 'assets/animations/mouse-hits.json';
 
     setTimeout(() => {
       const el = document.getElementById(`click-anim-${id}`);
