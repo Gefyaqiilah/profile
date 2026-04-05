@@ -44,6 +44,19 @@ export class HeaderComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
     }
+    if (this.isDark) {
+      const audio = new Audio('assets/audio/dark.wav');
+      audio.play();
+      audio.addEventListener('ended', () => {
+        audio.remove();
+      });
+    } else {
+      const audio = new Audio('assets/audio/light.wav');
+      audio.play();
+      audio.addEventListener('ended', () => {
+        audio.remove();
+      });
+    }
   }
 
   private applyTheme() {
